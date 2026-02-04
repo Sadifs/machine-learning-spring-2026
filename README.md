@@ -7,7 +7,7 @@ for future machine learning modeling. The goal is to make the dataset
 "analytics-ready" by applying systematic data understanding and cleaning steps.
 
 ## Dataset
-- **Source:** Ames Housing Dataset
+- **Source:** Training Dataset (https://github.com/ArinB/MSBA-CA-Data/raw/main/CA01/house-price-train.csv)
 - **File Used:** house-price-train.csv
 - **Target Variable:** SalePrice
 - **Description File:** data_description.txt
@@ -53,5 +53,5 @@ The notebook follows the three required CA01 stages:
 - All explanations, observations, and conclusions are included in the notebook
 
 ## Acknowledgements
-Dataset provided by Ames Housing and course materials from MSBA CA01.
+Dataset provided by Dr Arin Brahma and course materials from BSAN6070.
 
