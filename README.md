@@ -7,7 +7,7 @@ for future machine learning modeling. The goal is to make the data analytics-rea
 through systematic data understanding and cleaning, without performing model training.
 
 ## Dataset
-- **Source:** Ames Housing Training Dataset (provided via course GitHub repository)  
+- **Source:** House Training Dataset (provided via course GitHub repository)  
   https://github.com/ArinB/MSBA-CA-Data/raw/main/CA01/house-price-train.csv
 - **Target Variable:** SalePrice
 - **Description File:** data_description.txt
