@@ -50,7 +50,7 @@ The notebook follows the three required CA01 stages:
 ## Notes
 - No machine learning model is built in this assignment
 - Encoding and scaling are deferred, as the focus is EDA and data quality assessment
-- All explanations, observations, and conclusions are included in the notebook
+- All explanations, observations and conclusions are included in the notebook
 
 ## Acknowledgements
 Dataset and course materials provided by Dr. Arin Brahma for BSAN 6070.
