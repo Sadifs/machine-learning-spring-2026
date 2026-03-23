@@ -1,24 +1,97 @@
 # CA05 – kNN Based Movie Recommender Engine
 
 ## Description
-This project builds a movie recommendation engine using the k-Nearest Neighbors (kNN) algorithm. Given a query movie ("The Post"), it identifies the 5 most similar movies from a 30-movie dataset based on genre attributes and IMDB rating.
+
+This project builds a content-based movie recommendation engine using the **k-Nearest Neighbors (kNN)** algorithm. Given a query movie, the engine searches a dataset of 30 films and returns the 5 most similar movies based on genre attributes and IMDB rating.
+
+**Core question:** *What are the 5 movies most similar to "The Post"?*
+
+A user browsing a movie website encounters *The Post* and wants to see similar titles. The engine takes the movie's feature vector (genres + rating), computes Euclidean distances across all movies in the dataset, and returns the top 5 nearest neighbors.
+
+---
 
 ## Libraries & Versions
-- Python 3.13.5
-- pandas
-- scikit-learn
+
+| Library | Version | Purpose |
+|---|---|---|
+| Python | 3.13.5 | Runtime environment |
+| pandas | latest | Data loading and manipulation |
+| scikit-learn | latest | `NearestNeighbors` kNN implementation |
+
+---
 
 ## Dataset
+
 **File:** `movies_recommendation_data.csv`  
-**Source:** https://github.com/ArinB/MSBA-CA-Data/raw/main/CA05/movies_recommendation_data.csv  
-30 movies with 8 features: IMDB Rating, Biography, Drama, Thriller, Comedy, Crime, Mystery, History.
+**Source:** [https://github.com/ArinB/MSBA-CA-Data/raw/main/CA05/movies_recommendation_data.csv](https://github.com/ArinB/MSBA-CA-Data/raw/main/CA05/movies_recommendation_data.csv)
+
+The dataset contains 30 movies, each described by 8 numerical features:
+
+| Feature | Type | Description |
+|---|---|---|
+| IMDB Rating | Continuous | Movie rating on IMDB (range ~5.9–8.8) |
+| Biography | Binary (0/1) | Whether the movie is a biographical film |
+| Drama | Binary (0/1) | Whether the movie is a drama |
+| Thriller | Binary (0/1) | Whether the movie is a thriller |
+| Comedy | Binary (0/1) | Whether the movie is a comedy |
+| Crime | Binary (0/1) | Whether the movie involves crime |
+| Mystery | Binary (0/1) | Whether the movie is a mystery |
+| History | Binary (0/1) | Whether the movie is historical |
+
+> The `Label` column (all zeros) and identifier columns (`Movie ID`, `Movie Name`) are dropped before modeling.
+
+The dataset is loaded directly from the URL in the notebook — no manual download needed.
+
+---
 
 ## How to Install and Run
-1. Install dependencies:
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd CA05
+```
+
+### 2. Install required libraries
 ```bash
 pip install pandas scikit-learn
 ```
-2. Open and run all cells in `CA05_kNN_Recommender.ipynb`. The dataset loads automatically from the URL.
+
+### 3. Run the notebook
+Open `CA05_kNN_Recommender.ipynb` in Jupyter and run all cells top to bottom:
+```bash
+jupyter notebook CA05_kNN_Recommender.ipynb
+```
+
+The dataset is fetched automatically from GitHub inside the notebook — no additional setup needed.
+
+---
+
+## Results
+
+The 5 most similar movies to *The Post* (IMDB: 7.2 | Biography, Drama, History), ranked by Euclidean distance:
+
+| Rank | Movie | IMDB Rating | Distance |
+|---|---|---|---|
+| 1 | 12 Years a Slave | 8.1 | 0.900 |
+| 2 | Hacksaw Ridge | 8.2 | 1.000 |
+| 3 | Queen of Katwe | 7.4 | 1.020 |
+| 4 | The Wind Rises | 7.8 | 1.166 |
+| 5 | A Beautiful Mind | 8.2 | 1.414 |
+
+---
+
+## Project Structure
+```
+CA05/
+├── CA05_kNN_Recommender.ipynb   # Main notebook with all steps and narrative
+├── README.md                    # This file
+```
+
+---
 
 ## Acknowledgements
-Dataset sourced from the UCI Machine Learning Repository IMDB dataset, provided via course materials by Professor Arin Brahma, LMU. Original repo: https://github.com/ArinB/MSBA-CA-Data
+
+- Dataset sourced from the **UCI Machine Learning Repository IMDB dataset**, accessed via course materials provided by Professor Arin Brahma, Loyola Marymount University.
+- Original dataset repository: [https://github.com/ArinB/MSBA-CA-Data](https://github.com/ArinB/MSBA-CA-Data)
+- kNN implementation built using [scikit-learn's NearestNeighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html).
