@@ -47,21 +47,10 @@ The dataset is loaded directly from the URL in the notebook — no manual downlo
 ## How to Install and Run
 
 ### 1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd CA05
-```
 
 ### 2. Install required libraries
-```bash
-pip install pandas scikit-learn
-```
 
 ### 3. Run the notebook
-Open `CA05_kNN_Recommender.ipynb` in Jupyter and run all cells top to bottom:
-```bash
-jupyter notebook CA05_kNN_Recommender.ipynb
-```
 
 The dataset is fetched automatically from GitHub inside the notebook — no additional setup needed.
 
@@ -81,17 +70,6 @@ The 5 most similar movies to *The Post* (IMDB: 7.2 | Biography, Drama, History),
 
 ---
 
-## Project Structure
-```
-CA05/
-├── CA05_kNN_Recommender.ipynb   # Main notebook with all steps and narrative
-├── README.md                    # This file
-```
-
----
-
 ## Acknowledgements
 
-- Dataset sourced from the **UCI Machine Learning Repository IMDB dataset**, accessed via course materials provided by Professor Arin Brahma, Loyola Marymount University.
-- Original dataset repository: [https://github.com/ArinB/MSBA-CA-Data](https://github.com/ArinB/MSBA-CA-Data)
-- kNN implementation built using [scikit-learn's NearestNeighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html).
+- Dataset accessed via course materials provided by Professor Arin Brahma, Loyola Marymount University: [https://github.com/ArinB/MSBA-CA-Data](https://github.com/ArinB/MSBA-CA-Data).
